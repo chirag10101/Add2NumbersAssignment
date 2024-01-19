@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model Add2NumbersAssignment.Models.Numbers
+
+<h1>Index</h1>
+@if(@ViewBag.res!=null){
+    <h1>sum is @ViewBag.res</h1>
+}else{
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.LabelFor(model => model.Num1)
+    @Html.EditorFor(model => model.Num1)
+    @Html.LabelFor(model => model.Num2)
+    @Html.EditorFor(model => model.Num2)
+    <button type="submit">Add</button>
+}
+}
+
+
